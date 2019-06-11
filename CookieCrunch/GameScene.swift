@@ -34,6 +34,14 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
+  var level: Level!
+  
+  let tileWidth: CGFloat = 32.0
+  let tileHeight: CGFloat = 36.0
+  
+  let gameLayer = SKNode()
+  let cookiesLayer = SKNode()
+  
   // Sound FX
   let swapSound = SKAction.playSoundFileNamed("Chomp.wav", waitForCompletion: false)
   let invalidSwapSound = SKAction.playSoundFileNamed("Error.wav", waitForCompletion: false)
@@ -53,6 +61,15 @@ class GameScene: SKScene {
     let background = SKSpriteNode(imageNamed: "Background")
     background.size = size
     addChild(background)
+    
+    addChild(gameLayer)
+    
+    let layerPosition = CGPoint(
+      x: -tileWidth * CGFloat(numColumns) / 2,
+      y: -tileHeight * CGFloat(numRows) / 2
+    )
+    cookiesLayer.position = layerPosition
+    gameLayer.addChild(cookiesLayer)
     
   }
   
