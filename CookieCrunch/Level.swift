@@ -27,3 +27,46 @@
 /// THE SOFTWARE.
 
 import Foundation
+
+let numColumns = 9
+let numRows = 9
+
+class Level {
+  private var cookies = Array2D<Cookie>(columns: numColumns, rows: numRows)
+  
+  func cookie (atColumn column: Int, row: Int) -> Cookie? {
+    // optional as not all grid squares will have a cookie
+    precondition(column >= 0 && column < numColumns)
+    precondition(row >= 0 && row < numRows)  // verify that column and row numbers are
+    return cookies[column, row]              // within the range 0–8
+  }
+  
+  // For now fill up the array with code; later we will read from JSON
+  func shuffle() -> Set<Cookie> {
+    // Fills up the level with random cookies
+    return createInitialCookies()
+  }
+  // A set is a collection with each element appearing only once; a set
+  // is unordered
+  
+  private func createInitialCookies() -> Set<Cookie> {
+    var set: Set<Cookie> = []
+    
+    // 1
+    for row in 0..<numRows {
+      for column in 0..<numColumns {
+        // 2
+        let cookieType = CookieType.random()
+        
+        // 3
+        let cookie = Cookie(column: column, row: row, cookieType: cookieType)
+        cookies[column, row] = cookie
+        
+        // 4
+        set.insert(cookie)
+      }
+    }
+    return set
+  }
+  
+}

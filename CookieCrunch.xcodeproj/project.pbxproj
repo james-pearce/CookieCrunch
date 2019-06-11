@@ -29,6 +29,7 @@
 		17A7E5AF1FB53C850044C48F /* Chomp.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17A7E5A91FB53C850044C48F /* Chomp.wav */; };
 		17A7E5B01FB53C850044C48F /* Error.wav in Resources */ = {isa = PBXBuildFile; fileRef = 17A7E5AA1FB53C850044C48F /* Error.wav */; };
 		186E13E12069D3DF003EBCA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 186E13E02069D3DE003EBCA0 /* LaunchScreen.storyboard */; };
+		44DC971B225CA5DB00B7F753 /* Level.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DC971A225CA5DB00B7F753 /* Level.swift */; };
 		44F4DB282259F8700061DE69 /* Cookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44F4DB272259F8700061DE69 /* Cookie.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		17A7E5A91FB53C850044C48F /* Chomp.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Chomp.wav; sourceTree = "<group>"; };
 		17A7E5AA1FB53C850044C48F /* Error.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Error.wav; sourceTree = "<group>"; };
 		186E13E02069D3DE003EBCA0 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		44DC971A225CA5DB00B7F753 /* Level.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Level.swift; sourceTree = "<group>"; };
 		44F4DB272259F8700061DE69 /* Cookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cookie.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -74,7 +76,6 @@
 		17A7E5651FB513CB0044C48F = {
 			isa = PBXGroup;
 			children = (
-				44F4DB272259F8700061DE69 /* Cookie.swift */,
 				17A7E5701FB513CC0044C48F /* CookieCrunch */,
 				17A7E56F1FB513CC0044C48F /* Products */,
 			);
@@ -93,6 +94,7 @@
 		17A7E5701FB513CC0044C48F /* CookieCrunch */ = {
 			isa = PBXGroup;
 			children = (
+				44F4DB272259F8700061DE69 /* Cookie.swift */,
 				17A7E5771FB513CC0044C48F /* GameScene.swift */,
 				17A7E5791FB513CC0044C48F /* GameViewController.swift */,
 				1769DFF81FE3818B00F99A23 /* LevelData.swift */,
@@ -107,6 +109,7 @@
 				17A7E57E1FB513CC0044C48F /* Assets.xcassets */,
 				170D54271FB6919C00BB205A /* Grid.atlas */,
 				17A7E5891FB516370044C48F /* Sprites.atlas */,
+				44DC971A225CA5DB00B7F753 /* Level.swift */,
 			);
 			path = CookieCrunch;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 				1769DFF91FE3818B00F99A23 /* LevelData.swift in Sources */,
 				17A7E57A1FB513CC0044C48F /* GameViewController.swift in Sources */,
 				44F4DB282259F8700061DE69 /* Cookie.swift in Sources */,
+				44DC971B225CA5DB00B7F753 /* Level.swift in Sources */,
 				17A7E5721FB513CC0044C48F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
